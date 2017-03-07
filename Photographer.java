@@ -15,4 +15,8 @@ import java.util.*;
     return listofcameras.size();
   }
 
+  public void addCamera(Camera camera){
+    listofcameras.add(camera);
+  }
+
   }
