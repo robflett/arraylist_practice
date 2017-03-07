@@ -19,4 +19,8 @@ import java.util.*;
     listofcameras.add(camera);
   }
 
+  public void removeCamera(){
+    listofcameras.remove(0);
+  }
+
   }
