@@ -47,10 +47,13 @@ public void canPrintDetailsAnalogue(){
 
 @Test
 public void canPrintAllDetails(){
-  photographer.printAllDetails(digitalcamera.printDetails(), analoguecamera.printDetails() );
+  photographer.addCamera(digitalcamera);
+  photographer.addCamera(analoguecamera);
+
+  // photographer.printAllDetails(digitalcamera.printDetails(), analoguecamera.printDetails() );
   
 
-  assertEquals("Canon " + "Nikon", photographer.printAllDetails() );
+  assertEquals("Canon" + "Nikon", photographer.printAllDetails() );
 }
 
 }
