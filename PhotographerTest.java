@@ -4,10 +4,14 @@ import org.junit.*;
 public class PhotographerTest{
   Photographer photographer;
   Camera camera;
+  DigitalCamera digitalcamera;
+  AnalogueCamera analoguecamera;
 
 @Before
 public void before(){
   photographer = new Photographer("Parker");
+  digitalcamera = new DigitalCamera("Canon");
+  analoguecamera = new AnalogueCamera("Nikon");
 
 }
 
@@ -28,6 +32,25 @@ public void canRemoveCameras(){
 
   photographer.removeCamera();
   assertEquals(0, photographer.cameraCount() );
+}
+
+@Test
+public void canPrintDetailsDigital(){
+  assertEquals("Canon", digitalcamera.printDetails() );
+}
+
+@Test
+public void canPrintDetailsAnalogue(){
+  assertEquals("Nikon", analoguecamera.printDetails() );
+}
+
+
+@Test
+public void canPrintAllDetails(){
+  photographer.printAllDetails(digitalcamera.printDetails(), analoguecamera.printDetails() );
+  
+
+  assertEquals("Canon " + "Nikon", photographer.printAllDetails() );
 }
 
 }

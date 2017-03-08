@@ -23,4 +23,15 @@ import java.util.*;
     listofcameras.remove(0);
   }
 
+  public String printAllDetails(Camera camera, Camera camera){
+    
+
+    // for(Camera camera : listofcameras){
+    //   return System.out.println(camera);
+    // }
+
+  }
+
+
+
   }
